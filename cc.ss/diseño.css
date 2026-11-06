@@ -1,0 +1,1054 @@
+@charset "utf-8";
+
+/* =====================================
+   1. ESTILOS GENERALES
+===================================== */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 75px;
+}
+
+body {
+    background-color: #fff;
+    margin: 0;
+    padding: 0;
+    font-family: "Exo", Arial, sans-serif;
+    overflow-x: hidden;
+}
+
+/* =====================================
+   2. BARRA DE NAVEGACIÓN
+===================================== */
+
+header {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 9999;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #FFD700;
+    color: #000;
+    min-height: 70px;
+    padding: 5px 25px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.logo {
+    position: relative;
+    left: 0;
+}
+
+.logo img {
+    width: 170px;
+    height: auto;
+    display: block;
+}
+
+.menu {
+    list-style: none;
+    padding: 0;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 35px;
+}
+
+.menu li {
+    margin: 0;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #000;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 10px 12px;
+}
+
+.menu a {
+    margin-left: 0;
+    transition: color 0.3s ease;
+}
+
+.navbar a:hover {
+    background-color: transparent;
+    color: #0077ff;
+}
+
+/* =====================================
+   3. FONDO PRINCIPAL
+===================================== */
+
+.fixed-background {
+    position: relative;
+    width: 100%;
+    min-height: 700px;
+    background-image: url("fondo.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* =====================================
+   4. CÍRCULOS DE SERVICIOS
+===================================== */
+
+.button-container{
+    position: absolute;
+    left: 50%;
+    top: 68%;               /* Baja todo el conjunto */
+    transform: translateX(-50%);
+    width: 95%;
+
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    flex-wrap:wrap;
+
+    text-align: center;
+}
+
+.button-link{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+	    justify-content:flex-start;
+    text-decoration:none;
+    color:#fff;
+}
+
+.button-link:hover {
+    transform: scale(1.1);
+}
+
+.button-link img {
+    height: 110px;
+    border: none;
+    object-fit: cover;
+}
+
+.index-button-link img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #fff;
+}
+.button-link h1 + h1{
+    margin-top:-20px;
+    margin-bottom:8px;
+}
+.content h1:nth-child(2) {
+    margin-top: -10px;
+}
+.button-link.doble{
+    margin-top: -25px;
+}
+/* =====================================
+   5. NUESTRA HISTORIA
+===================================== */
+
+.historia-section {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 40px 40px 10px;
+    text-align: center;
+    font-size: 27px;
+}
+
+.historia-section h1 {
+    font-size: 42px;
+    text-align: center;
+}
+
+/* =====================================
+   6. ADAPTACIÓN PARA TABLETS
+===================================== */
+
+@media screen and (max-width: 1024px) {
+
+    .navbar {
+        padding: 5px 15px;
+    }
+
+    .logo img {
+        width: 140px;
+    }
+
+    .menu {
+        gap: 12px;
+    }
+
+    .navbar a {
+        font-size: 17px;
+        padding: 8px;
+    }
+
+    .fixed-background {
+        min-height: 600px;
+    }
+
+.button-container{
+    top:65%;
+    width:98%;
+    gap:15px;
+}
+
+.button-link{
+    width:18%;
+}
+
+.button-link h1{
+    font-size:22px;
+}
+
+.button-link img{
+    width:90px;
+    height:auto;
+}
+
+.button-link.doble{
+    margin-top:-15px;
+}
+
+}
+
+/* =====================================
+   7. ADAPTACIÓN PARA CELULARES
+===================================== */
+
+@media screen and (max-width: 600px) {
+
+    .navbar {
+        flex-direction: column;
+        justify-content: center;
+        padding: 8px 5px;
+        min-height: auto;
+    }
+
+    .logo {
+        margin-bottom: 5px;
+    }
+
+    .logo img {
+        width: 115px;
+    }
+
+    .menu {
+        width: 100%;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 3px;
+    }
+
+    .navbar a {
+        font-size: 12px;
+        padding: 7px 8px;
+    }
+
+    .fixed-background {
+        min-height: 600px;
+        background-position: center;
+    }
+
+.button-container{
+    position:relative;
+    top:auto;
+    left:auto;
+    transform:none;
+
+    width:100%;
+    padding:30px 15px;
+
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:25px;
+}
+
+.button-link{
+    width:45%;
+}
+
+.button-link h1{
+    font-size:18px;
+}
+
+.button-link img{
+    width:85px;
+    height:auto;
+}
+
+.button-link.doble{
+    margin-top:0;
+}
+
+}
+/* =====================================
+   8. CATÁLOGO DEL TALLER
+===================================== */
+
+.section-container {
+    position: relative;
+    background-image: url("fondo 2.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border: 1px solid #ccc;
+    border-radius: 170px;
+    width: 100%;
+    min-height: 650px;
+    height: auto;
+    margin-top: 90px;
+    padding: 20px 15px 80px;
+}
+
+.section-container h1 {
+    text-align: center;
+    color: #000;
+    font-size: 4em;
+    margin-bottom: 20px;
+}
+
+.items {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.item {
+    width: calc(25% - 20px);
+    text-align: center;
+    position: relative;
+    bottom: 0;
+    transition: transform 0.3s ease;
+}
+
+.item:hover {
+    transform: scale(1.03);
+}
+
+.item img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+/* Botón de más información */
+
+.btn-mas-info {
+    font-family: "Exo", Arial, sans-serif;
+    position: absolute;
+    bottom: 25px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px 20px;
+    font-size: 25px;
+    color: #fff;
+    background-color: #FF0004;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-mas-info:hover {
+    background-color: #cc3300;
+}
+
+/* =====================================
+   9. COMENTARIOS DE CLIENTES
+===================================== */
+
+.testimonials-container {
+    max-width: 2000px;
+    width: 100%;
+    margin: 40px auto;
+    min-height: 700px;
+    height: auto;
+    padding: 10px 20px 80px;
+    background-image: url("fondo 3.jpeg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.testimonials-container h2 {
+    text-align: center;
+    color: #000;
+    font-size: 4em;
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+
+.testimonials {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    justify-content: center;
+    padding: 20px;
+}
+
+.testimonial {
+     flex: 0 0 calc(50% - 20px);
+    max-width: calc(50% - 20px);
+    min-width: 350px;
+
+    background:#fff;
+    color:#000;
+    padding:20px;
+    border-radius:40px;
+    box-shadow:0 4px 6px rgba(0,0,0,.1);
+}
+
+.name {
+    font-family: Arial, sans-serif;
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.avatar {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 2px solid #ccc;
+}
+
+.role {
+    font-family: Arial, sans-serif;
+    font-size: 20px;
+    color: #000;
+    margin-bottom: 10px;
+}
+
+.comment {
+    font-family: "Minion variable concept", Georgia, serif;
+    font-size: 20px;
+    font-style: italic;
+}
+
+/* Botón de WhatsApp */
+
+.elementor-button {
+    margin: 20px auto 0;
+    padding: 10px 20px;
+    font-size: 30px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #FF0004;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+    text-decoration: none !important;
+    position: relative;
+    left: auto;
+    bottom: auto;
+    transform: none;
+}
+
+.elementor-button:hover {
+    background-color: #cc3300;
+}
+
+/* =====================================
+   10. ADAPTACIÓN PARA TABLETS
+===================================== */
+
+@media screen and (max-width: 1024px) {
+
+    .section-container {
+        border-radius: 90px;
+        margin-top: 60px;
+        min-height: auto;
+        padding-bottom: 80px;
+    }
+
+    .section-container h1 {
+        font-size: 3em;
+    }
+
+    .item {
+        width: calc(33.33% - 20px);
+    }
+
+    .item img {
+        width: 170px;
+        height: 170px;
+    }
+
+    .testimonials-container {
+        min-height: auto;
+        padding-bottom: 60px;
+    }
+
+    .testimonials-container h2 {
+        font-size: 3em;
+    }
+
+    .testimonial {
+        max-width: 45%;
+        min-width: 260px;
+    }
+
+    .name {
+        font-size: 25px;
+    }
+
+    .role,
+    .comment {
+        font-size: 18px;
+    }
+}
+
+/* =====================================
+   11. ADAPTACIÓN PARA CELULARES
+===================================== */
+
+@media screen and (max-width: 600px) {
+
+    .section-container {
+        width: 100%;
+        margin-top: 35px;
+        border-radius: 35px;
+        min-height: auto;
+        padding: 20px 10px 75px;
+    }
+
+    .section-container h1 {
+        font-size: 2em;
+        margin-top: 10px;
+    }
+
+    .items {
+        gap: 15px;
+        padding: 10px 5px;
+    }
+
+    .item {
+        width: calc(50% - 15px);
+    }
+
+    .item img {
+        width: 125px;
+        height: 125px;
+    }
+
+    .btn-mas-info {
+        font-size: 17px;
+        padding: 9px 18px;
+        bottom: 20px;
+        white-space: nowrap;
+    }
+
+    .testimonials-container {
+        width: 100%;
+        min-height: auto;
+        margin: 25px auto;
+        padding: 15px 10px 35px;
+    }
+
+    .testimonials-container h2 {
+        font-size: 2em;
+    }
+
+    .testimonials {
+        gap: 20px;
+        padding: 10px 5px;
+    }
+
+    .testimonial {
+        flex: 1 1 100%;
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+        padding: 18px;
+        border-radius: 25px;
+    }
+
+    .name {
+        font-size: 22px;
+    }
+
+    .avatar {
+        width: 85px;
+        height: 85px;
+    }
+
+    .role {
+        font-size: 16px;
+    }
+
+    .comment {
+        font-size: 16px;
+    }
+
+    .elementor-button {
+        font-size: 18px;
+        padding: 10px 18px;
+        margin-top: 20px;
+    }
+}
+
+/* =====================================
+   12. CARRUSEL DE MARCAS
+===================================== */
+
+.logos-section {
+    margin-top: 135px;
+    margin-bottom: 20px;
+    background-color: #fff;
+    text-align: center;
+    padding: 40px 20px;
+    font-size: 2em;
+    font-weight: bold;
+    width: 100%;
+}
+
+.carousel {
+    position: relative;
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 10px 50px 60px;
+    overflow: hidden;
+}
+
+.logos-container {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 50px;
+    padding: 10px 0;
+    transition: transform 0.5s ease;
+}
+
+.logos-container img {
+    width: 170px;
+    height: 80px;
+    object-fit: contain;
+    flex-shrink: 0;
+}
+
+/* Botón siguiente */
+
+.carousel-button.next {
+    position: absolute;
+    top: 75%;
+    left: 50%;
+    right: auto;
+    transform: translateX(-50%);
+
+    background-color: rgba(255,255,255,0.9);
+    border: 1px solid #ddd;
+    color: #333;
+    font-size: 20px;
+    cursor: pointer;
+
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    z-index:10;
+}
+/* =====================================
+   13. ESTADÍSTICAS
+===================================== */
+
+.stats-section {
+    text-align: center;
+    margin-top: 20px;
+    width: 100%;
+}
+
+.stats-section h2 {
+    font-size: 2.5em;
+    font-weight: bold;
+    margin-bottom: 50px;
+    color: #000;
+}
+
+.stats-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    padding: 10px 20px;
+}
+
+.stat-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    min-width: 150px;
+}
+
+.stat-item img {
+    width: 100%;
+    height: auto;
+    max-width: 100px;
+    margin-bottom: 10px;
+}
+
+.stat-item p {
+    margin: 2px 0;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #000;
+}
+
+/* =====================================
+   14. CONTACTO Y UBICACIÓN
+===================================== */
+
+h1 {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.address-section {
+    font-size: 2rem;
+    text-align: left;
+    margin: 0 auto 20px;
+    width: 100%;
+    max-width: 1000px;
+    padding: 0 15px;
+}
+
+.map-container {
+    text-align: center;
+    width: 100%;
+}
+
+.map-image {
+    width: 100%;
+    max-width: 700px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.hours {
+    margin-top: 20px;
+    padding: 15px;
+    font-size: 2rem;
+    text-align: left;
+    margin: 0 auto 20px;
+    width: 100%;
+    max-width: 1000px;
+}
+
+/* =====================================
+   15. SECCIÓN FINAL DE CONTACTOS
+===================================== */
+
+.contact-section {
+    text-decoration: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 25px;
+    text-align: center;
+    background-color: #ffcc00;
+    padding: 25px 30px;
+    color: #000;
+    width: 100%;
+}
+
+.contact-section img {
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+    vertical-align: middle;
+}
+
+/* Logo */
+
+.contact-section .logo img {
+    width: 170px;
+    height: auto;
+}
+
+/* Números de contacto */
+
+.contacts {
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.contacts p {
+    font-weight: bold;
+    font-size: 25px;
+    text-decoration: none;
+    margin: 2px 0;
+}
+
+.contact-title {
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.contact-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    font-size: 25px;
+    font-weight: bold;
+    color: #000;
+    text-decoration: none;
+}
+
+.contact-link img {
+    width: 35px;
+    height: 35px;
+}
+
+/* Redes sociales */
+
+.socials {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.socials p {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.socials a {
+    text-decoration: none;
+    color: #333;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+.social-icons a img {
+    width: 45px;
+    height: 45px;
+    object-fit: contain;
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.social-icons a img:hover {
+    transform: scale(1.1);
+}
+
+/* =====================================
+   16. ADAPTACIÓN PARA TABLETS
+===================================== */
+
+@media screen and (max-width: 1024px) {
+
+    .logos-section {
+        margin-top: 80px;
+        font-size: 1.7em;
+    }
+
+    .carousel {
+        max-width: 90%;
+        padding-left: 45px;
+        padding-right: 45px;
+    }
+
+    .logos-container {
+        gap: 35px;
+    }
+
+    .logos-container img {
+        width: 140px;
+        height: 70px;
+    }
+
+    .stats-container {
+        gap: 35px;
+    }
+
+    .stat-item {
+        min-width: 130px;
+    }
+
+    .stats-section h2 {
+        font-size: 2em;
+    }
+
+    .address-section,
+    .hours {
+        font-size: 1.5rem;
+        padding: 0 20px;
+    }
+
+    .contact-section {
+        justify-content: space-around;
+        padding: 25px 15px;
+    }
+
+    .contacts p,
+    .contact-title,
+    .contact-link {
+        font-size: 21px;
+    }
+}
+
+/* =====================================
+   17. ADAPTACIÓN PARA CELULARES
+===================================== */
+
+@media screen and (max-width: 600px) {
+
+    .logos-section {
+        margin-top: 50px;
+        padding: 25px 5px;
+        font-size: 1.3em;
+    }
+
+    .carousel {
+        width: 100%;
+        padding: 10px 40px 50px;
+    }
+
+    .logos-container {
+        gap: 25px;
+    }
+
+    .logos-container img {
+        width: 110px;
+        height: 60px;
+    }
+
+    .carousel-button.next {
+		
+        width: 32px;
+        height: 32px;
+        font-size: 16px;
+        right: 3px;
+    }
+
+    .stats-section {
+        margin-top: 15px;
+    }
+
+    .stats-section h2 {
+        font-size: 1.7em;
+        margin-bottom: 30px;
+    }
+
+    .stats-container {
+        gap: 25px 10px;
+        padding: 10px;
+    }
+
+    .stat-item {
+        width: 43%;
+        min-width: 0;
+    }
+
+    .stat-item img {
+        max-width: 75px;
+    }
+
+    .stat-item p {
+        font-size: 0.95em;
+    }
+
+    h1 {
+        font-size: 27px;
+    }
+
+    .address-section,
+    .hours {
+        font-size: 1.1rem;
+        padding: 0 15px;
+    }
+
+    .map-image {
+        width: 95%;
+    }
+
+    .contact-section {
+        flex-direction: column;
+        justify-content: center;
+        gap: 25px;
+        padding: 25px 10px;
+    }
+
+    .contact-section .logo img {
+        width: 140px;
+    }
+
+    .contacts p,
+    .contact-title {
+        font-size: 20px;
+    }
+
+    .contact-link {
+        font-size: 20px;
+    }
+
+    .contact-link img {
+        width: 30px;
+        height: 30px;
+    }
+
+    .socials p {
+        font-size: 20px;
+    }
+
+    .social-icons {
+        gap: 20px;
+    }
+
+    .social-icons a img {
+        width: 38px;
+        height: 38px;
+    }
+}
+

@@ -1,0 +1,300 @@
+@charset "utf-8";
+
+/* Estilos generales */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    font-family: 'Times New Roman', sans-serif;
+}
+
+
+header {
+    background-color: #fff;
+    padding: 10px 0;
+    text-align: center;
+}
+
+
+.logo {
+    color: #FF0004;
+    font-size: 50px;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-family: 'Times New Roman', cursive;
+}
+
+
+/* Fondo */
+.pagina {
+
+    background-image: url("fondo 3.png");
+    background-size: cover;
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+    width:90%;
+    max-width:1300px;
+
+    margin:auto;
+
+    border-radius:30px;
+
+    height:130vh;
+
+    padding:40px 20px;
+}
+
+main {
+
+    max-width: 1200px;
+
+    margin: 10px auto;
+
+    padding: 0 20px;
+
+}
+
+
+/* Secciones */
+.mantenimiento {
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 40px;
+
+    margin-bottom: 30px;
+
+}
+
+
+.contenido {
+
+    width: 60%;
+
+}
+
+
+.contenido h2 {
+
+    color: #080032;
+
+    font-size: 44px;
+
+    margin-bottom: 10px;
+
+    font-family: 'Times New Roman', sans-serif;
+
+}
+
+
+.contenido p {
+
+    line-height: 1.6;
+
+    color: #000000;
+
+    font-size: 38px;
+
+    font-family: 'Agency FB', sans-serif;
+
+}
+
+
+.mantenimiento img {
+
+    width: 35%;
+
+    max-width: 350px;
+
+    height: auto;
+
+    border-radius: 9px;
+
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+
+}
+
+
+
+/* Adaptación para laptop */
+@media(max-width:1200px){
+
+    .contenido h2{
+
+        font-size:38px;
+
+    }
+
+
+    .contenido p{
+
+        font-size:30px;
+
+    }
+
+
+    .pagina{
+
+        height:130vh;
+
+    }
+
+}
+
+
+
+/* Adaptación para celular */
+@media(max-width:768px){
+
+    .pagina{
+
+        width:90%;
+
+        height:150vh;
+
+        padding:25px 15px;
+
+    }
+
+
+    main{
+
+        padding:0;
+
+    }
+
+
+    .mantenimiento{
+
+        flex-direction:column;
+
+        text-align:center;
+
+    }
+
+
+    .contenido{
+
+        width:100%;
+
+    }
+
+
+    .contenido h2{
+
+        font-size:28px;
+
+    }
+
+
+    .contenido p{
+
+        font-size:20px;
+
+    }
+
+
+    .mantenimiento img{
+
+        width:80%;
+
+    }
+
+
+}
+
+
+/* ===== AJUSTES RESPONSIVE DR MOTORS ===== */
+
+*{
+    box-sizing:border-box;
+}
+
+img{
+    max-width:100%;
+    height:auto;
+}
+
+.pagina{
+    height:auto !important;
+    min-height:100vh;
+    background-position:center top;
+}
+
+@media (max-width:1200px){
+
+    .contenido h2{
+        font-size:clamp(28px,4vw,40px);
+    }
+
+    .contenido p{
+        font-size:clamp(20px,3vw,32px);
+    }
+
+    .pagina{
+        width:92%;
+    }
+}
+
+@media (max-width:900px){
+
+    .mantenimiento,
+    .diagnostico,
+    .retificacion,
+    .seccion{
+        flex-direction:column;
+        text-align:center;
+        gap:25px;
+    }
+
+    .contenido{
+        width:100% !important;
+    }
+
+    .mantenimiento img,
+    .diagnostico img,
+    .retificacion img,
+    .seccion img{
+        width:75%;
+    }
+
+    main{
+        padding:0 10px;
+    }
+}
+
+@media (max-width:600px){
+
+    .logo{
+        font-size:32px !important;
+    }
+
+    .contenido h2{
+        font-size:26px !important;
+    }
+
+    .contenido p{
+        font-size:20px !important;
+        line-height:1.5;
+    }
+
+    .pagina{
+        width:95%;
+        padding:20px 10px;
+        border-radius:20px;
+    }
+
+    .mantenimiento img,
+    .diagnostico img,
+    .retificacion img,
+    .seccion img{
+        width:100%;
+    }
+}
+
