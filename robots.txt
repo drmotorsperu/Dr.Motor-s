@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://drmotorsperu.github.io/Dr.Motor-s/sitemap.xml
